@@ -29,6 +29,17 @@ app.get("/pizza/cardapio", (req, res) => {
     res.send(bd);
 });
 
+app.get("/pizza/cardapio/:idpizza", (req, res) => {
+    const idPizza = req.params.idpizza;
+
+    if (idPizza >= 0 && idPizza < bd.length) {
+        res.send(bd[idPizza]);
+    } else {
+        res.status(404).send();
+    }
+
+});
+
 app.get("/", (req, res) => {
     res.send("Olá mundo!");
 });
