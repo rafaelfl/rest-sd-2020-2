@@ -37,7 +37,13 @@ app.get("/pizza/cardapio/:idpizza", (req, res) => {
     } else {
         res.status(404).send();
     }
+});
 
+app.post("/pizza/cadastro", (req, res) => {
+    const pizza = req.body;
+
+    bd.push(pizza);
+    res.send({ result: "OK" });
 });
 
 app.get("/", (req, res) => {
