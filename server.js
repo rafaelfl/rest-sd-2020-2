@@ -2,10 +2,10 @@ const express = require("express");
 
 const app = express();
 
-const porta = 3000;
+const porta = process.env.PORT || 80;
 
 app.get("/", (req, res) => {
-    res.send("Olá mundo!");
+    res.send("Olá mundo 2!");
 });
 
 app.listen(porta, () => {
