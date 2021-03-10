@@ -25,6 +25,8 @@ const bd = [
 
 app.use(express.json());
 
+app.use(express.static(process.env.PWD + "/public"));
+
 app.get("/pizza/cardapio", (req, res) => {
     res.send(bd);
 });
