@@ -4,7 +4,7 @@
   "description": "Implementação de uma API RESTful com Node.js e o *middleware* `express`.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
