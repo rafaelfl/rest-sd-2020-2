@@ -47,7 +47,7 @@ app.post("/pizza/cadastro", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Olá mundo!");
+    res.render("index");
 });
 
 app.listen(porta, () => {
